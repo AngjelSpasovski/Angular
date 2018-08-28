@@ -1,0 +1,33 @@
+<div id="app-tabs">
+
+  <ul class="nav nav-tabs" role="tablist">
+
+    <li class="nav-item">
+      <a  class="nav-link active"
+          role="tab"
+          data-toggle="tab"
+          (click)="onChoose('all')"
+          style="cursor: pointer">All</a>
+    </li>
+    <li class="nav-item">
+      <a  class="nav-link"
+          href="#light"
+          role="tab"
+          data-toggle="tab"
+          (click)="onChoose('light')"
+          style="cursor: pointer">Light</a>
+    </li>
+    <li class="nav-item">
+      <a  class="nav-link"
+          href="#dark"
+          role="tab"
+          data-toggle="tab"
+          (click)="onChoose('dark')"
+          style="cursor: pointer">Dark</a>
+    </li>
+  </ul>
+
+  <!-- App List Component -->
+  <app-list [characters]="getCharacters()"></app-list>
+
+</div>

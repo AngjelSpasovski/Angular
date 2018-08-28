@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+
+import { random } from 'lodash';
+
+declare var _: any;
 
 @Component({
   selector: 'app-root',
