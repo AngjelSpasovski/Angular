@@ -10,38 +10,38 @@ export class TabsComponent implements OnInit {
   characters = [
     {
       name: 'Luke Skywalker',
-      side: 'light'
+      side: ''
     },
     {
       name: 'Dart Vader',
-      side: 'dark'
+      side: ''
     },
     {
       name: 'Anakin Skywalker',
-      side: 'light'
+      side: ''
     },
     {
       name: 'Yoda',
-      side: 'light'
+      side: ''
     },
     {
       name: 'Rey',
-      side: 'light'
+      side: ''
     },
     {
       name: 'Supreme Leader Snoke',
-      side: 'dark'},
+      side: ''},
     {
       name: 'Sheev Palpatine',
-      side: 'dark'
+      side: ''
     },
     {
       name: 'General Hux',
-      side: 'dark'
+      side: ''
     },
     {
       name: 'Qui-Gon Jinn',
-      side: 'light'
+      side: ''
     }
 
    ];
@@ -64,6 +64,14 @@ export class TabsComponent implements OnInit {
     return this.characters.filter((char) => {
      return char.side === this.chosenList;
     });
+  }
+
+  onSideChosen(charInfo){
+    const pos = this.characters.findIndex((char)  => {
+      return char.name === charInfo.name;
+    })
+
+    this.characters[pos].side = charInfo.side;
   }
 
 }

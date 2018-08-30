@@ -2,24 +2,25 @@
 
   <ul class="nav nav-tabs" role="tablist">
 
-    <li class="nav-item">
-      <a  class="nav-link active"
+    <li class="nav-item text-yellow">
+      <a  class="nav-link"
           role="tab"
+          [ngClass]="{active: chosenList === 'all'}"
           data-toggle="tab"
           (click)="onChoose('all')"
           style="cursor: pointer">All</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item text-yellow">
       <a  class="nav-link"
-          href="#light"
+          [ngClass]="{active: chosenList === 'light'}"
           role="tab"
           data-toggle="tab"
           (click)="onChoose('light')"
           style="cursor: pointer">Light</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item text-yellow">
       <a  class="nav-link"
-          href="#dark"
+          [ngClass]="{active: chosenList === 'dark'}"
           role="tab"
           data-toggle="tab"
           (click)="onChoose('dark')"
@@ -28,6 +29,7 @@
   </ul>
 
   <!-- App List Component -->
-  <app-list [characters]="getCharacters()"></app-list>
+  <app-list [characters]="getCharacters()"
+            (sideAssigned)="onSideChosen($event)"></app-list>
 
 </div>
