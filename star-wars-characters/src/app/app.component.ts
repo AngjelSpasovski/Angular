@@ -10,5 +10,5 @@ declare var _: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'my "f#&$ing" app';
 }

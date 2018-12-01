@@ -1,4 +1,5 @@
-.text-yellow {
+.tab-box {
     color: yellow;
     text-decoration: underline;
+    cursor: pointer;
 }
