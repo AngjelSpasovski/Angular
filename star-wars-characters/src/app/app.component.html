@@ -1,4 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!-- Welcome Logo & Tile -->
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
@@ -6,7 +6,16 @@
   <img width="300" alt="Angular Logo" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg">
 </div>
 
+<!-- Main Container -->
 <div class="container">
+  
+  <!-- Create characters -->
+  <div  class="col-xs-12 col-sm-6" 
+        style="background-color: white; margin-bottom: 10px;">
+    <create-character></create-character>
+  </div>
+
+  <!-- Display Characters in Tabs -->
   <div class="col-xs-12">
       <app-tabs></app-tabs>
   </div>
