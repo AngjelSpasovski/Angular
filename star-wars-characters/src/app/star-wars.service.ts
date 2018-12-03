@@ -47,8 +47,16 @@ export class StarWarsService {
   }
 
   addCharacter(name, side){
-    const newChar = {name: name, side: side};
 
+    const pos = this.characters.findIndex((char)  => {
+      return char.name === name;
+    }) 
+    if(pos !== -1){
+      this.logService.writeLog("Character already exists!");
+      return;
+    }
+
+    const newChar = {name: name, side: side};
     this.characters.push(newChar);
   }
 }
