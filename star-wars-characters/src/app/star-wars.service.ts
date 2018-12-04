@@ -11,11 +11,7 @@ export class StarWarsService {
     { name: 'Dart Vader',           side: ''  },
     { name: 'Anakin Skywalker',     side: ''  },
     { name: 'Yoda',                 side: ''  },
-    { name: 'Rey',                  side: ''  },
-    { name: 'Supreme Leader Snoke', side: ''  },
-    { name: 'Sheev Palpatine',      side: ''  },
-    { name: 'General Hux',          side: ''  },
-    { name: 'Qui-Gon Jinn',         side: ''  }
+    { name: 'Rey',                  side: ''  }
    ];
 
   private logService: LogService;
