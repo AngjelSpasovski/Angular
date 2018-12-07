@@ -3,8 +3,12 @@
   <form (ngSubmit)="onSubmit(form)" #form="ngForm">
     <div class="form-group">
       <label for="name" class="label-text">Character name</label>
-      <input  type="text" id="name" name="name" 
-              class="form-control" ngModel required
+      <input  type="text" 
+              id="name" 
+              name="name" 
+              class="form-control" 
+              [ngModel]="defaultName" 
+              required
               #nameCtrl="ngModel">
       <span class="help-block" *ngIf="nameCtrl.invalid && nameCtrl.touched">Please enter a name!</span>
     </div>

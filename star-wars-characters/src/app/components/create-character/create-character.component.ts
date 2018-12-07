@@ -17,6 +17,8 @@ export class CreateCharacterComponent implements OnInit {
   ];
 
   swService: StarWarsService;
+  
+  defaultName = 'Obi-Wannnnn';
 
   constructor(swService: StarWarsService) { 
     this.swService = swService;
