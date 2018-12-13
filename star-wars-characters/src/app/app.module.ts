@@ -19,7 +19,8 @@ import { LogService } from './log.service';
 // Routes are Array of JavaScript Objects
 const routes = [
   { path:'', component: TabsComponent },
-  { path:'new-character', component: CreateCharacterComponent }
+  { path:'new-character', component: CreateCharacterComponent },
+  { path: '**', redirectTo: '/' }
 ];
 
 @NgModule({
