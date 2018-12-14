@@ -9,15 +9,19 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <!--  -->
-        <li class="nav-item" 
-            routerLinkActive="active" 
-            [routerLinkActiveOptions]="{ exact: true }">
-          <button type="button" class="btn btn-outline-primary nav-link" routerLink="/">Star Wars Characters</button>
+        <li class="nav-item" routerLinkActive="active">
+          <button type="button" 
+                  class="btn btn-outline-primary nav-link" 
+                  routerLink="/characters">Star Wars Characters
+          </button>
         </li>
         
         <!--  -->
         <li class="nav-item" routerLinkActive="active">
-          <button type="button" class="btn btn-outline-primary nav-link" routerLink="/new-character">New Charcter</button>
+          <button type="button" 
+                  class="btn btn-outline-primary nav-link" 
+                  routerLink="/new-character">New Charcter
+          </button>
         </li>
 
       </ul>

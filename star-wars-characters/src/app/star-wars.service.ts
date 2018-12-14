@@ -25,9 +25,11 @@ export class StarWarsService {
   // Filtered list of characters of witch side are thay chosen to serve
   getCharacters(chosenList) {
     if ( chosenList === 'all' ) {
+      this.logService.MESSAGE_LOG("The data for '"+ chosenList +"' is loaded from the service!","success");
       return this.characters.slice();
     }
     return this.characters.filter((char) => {
+      this.logService.MESSAGE_LOG("The data for '"+ chosenList +"' is loaded from the service!","success");
      return char.side === chosenList;
     });
   }
@@ -39,16 +41,17 @@ export class StarWarsService {
     })
 
     this.characters[pos].side = charInfo.side;
-    this.logService.writeLog("Changed side of " + charInfo.name + ", new side: " + charInfo.side);
+    this.logService.MESSAGE_LOG("Changed side for " + charInfo.name + ", new side: " + charInfo.side, "info");
   }
 
   addCharacter(name, side){
 
     const pos = this.characters.findIndex((char)  => {
+      this.logService.MESSAGE_LOG("Character name: '"+ name +"' ", "warning");
       return char.name === name;
     }) 
     if(pos !== -1){
-      this.logService.writeLog("Character already exists!");
+      this.logService.MESSAGE_LOG("Character name '"+name+"' already exists!", "error");
       return;
     }
 

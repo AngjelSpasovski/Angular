@@ -2,30 +2,18 @@
 
   <ul class="nav nav-tabs" role="tablist">
 
-    <li class="nav-item tab-box">
-      <a  class="nav-link"
-          role="tab"
-          [ngClass]="{active: chosenList === 'all'}"
-          data-toggle="tab"
-          (click)="onChoose('all')">All</a>
+    <li class="nav-item tab-box" routerLinkActive="active">
+      <a  class="nav-link" role="tab" data-toggle="tab" routerLink="/characters/all">All</a>
     </li>
-    <li class="nav-item tab-box">
-      <a  class="nav-link"
-          [ngClass]="{active: chosenList === 'light'}"
-          role="tab"
-          data-toggle="tab"
-          (click)="onChoose('light')">Light</a>
+    <li class="nav-item tab-box" routerLinkActive="active">
+      <a  class="nav-link" role="tab" data-toggle="tab" routerLink="/characters/light">Light</a>
     </li>
-    <li class="nav-item tab-box">
-      <a  class="nav-link"
-          [ngClass]="{active: chosenList === 'dark'}"
-          role="tab"
-          data-toggle="tab"
-          (click)="onChoose('dark')">Dark</a>
+    <li class="nav-item tab-box" routerLinkActive="active">
+      <a  class="nav-link" role="tab" data-toggle="tab" routerLink="/characters/dark">Dark</a>
     </li>
   </ul>
 
   <!-- App List Component -->
-  <app-list [characters]="getCharacters()"></app-list>
+  <router-outlet></router-outlet>
 
 </div>
