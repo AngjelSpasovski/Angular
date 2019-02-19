@@ -11,7 +11,7 @@ export class LogService {
     console.log(logText);
   }
 
-  MESSAGE_LOG(message, color){
+  MESSAGE_LOG(message : string, color : string){
     color = color || "black";
 
     switch (color) {

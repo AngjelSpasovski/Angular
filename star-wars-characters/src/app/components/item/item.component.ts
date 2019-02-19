@@ -8,7 +8,7 @@ import { StarWarsService } from '../../star-wars.service';
 })
 export class ItemComponent implements OnInit {
 
-  @Input() character;
+  @Input() character : any;
   swService: StarWarsService;
 
   constructor(swService: StarWarsService) { 
@@ -18,13 +18,7 @@ export class ItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  onAssign(side){
-    //this.character.side = side;
-    // this.sideAssigned.emit({
-    //   name: this.character.name,
-    //   side: side
-    // });
-
+  onAssign(side : any){
     this.swService.onSideChosen({name: this.character.name, side: side});
   }
 
