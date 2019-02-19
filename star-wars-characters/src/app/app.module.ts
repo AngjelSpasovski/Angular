@@ -15,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 // Services
 import { StarWarsService } from './star-wars.service';
 import { LogService } from './log.service';
+import { HttpModule } from '@angular/http';
 
 // Routes are Array of JavaScript Objects
 const routes = [
@@ -39,7 +40,8 @@ const routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpModule
   ],
   providers: [StarWarsService, LogService],
   bootstrap: [AppComponent]

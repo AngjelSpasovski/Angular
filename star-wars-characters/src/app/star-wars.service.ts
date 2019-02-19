@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
 import { Observable, Subject, pipe } from 'rxjs';
 
 import { LogService } from './log.service';
@@ -19,12 +20,21 @@ export class StarWarsService {
   private logService: LogService;
 
   public characterChanged = new Subject<void>();
+  public http;
 
-  constructor(logService: LogService) {
+  constructor(logService: LogService, http: Http) {
     this.logService = logService;
+    this.http = http;
   }
 
 
+  fetchCharacters (){
+    this.http.get('https://swapi.co/api/people/').subscribe(
+      (response: Response) => {
+        console.log(response);
+      }
+    );
+  }
 
   // Filtered list of characters of witch side are thay chosen to serve
   getCharacters(chosenList: string) {
