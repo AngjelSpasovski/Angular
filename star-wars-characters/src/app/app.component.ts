@@ -1,6 +1,7 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 import { random } from 'lodash';
+import { StarWarsService } from './star-wars.service';
 
 declare var _: any;
 
@@ -9,6 +10,15 @@ declare var _: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'my "f#&$ing" app';
+export class AppComponent implements OnInit {
+  swService: StarWarsService;
+
+  constructor(swService: StarWarsService){
+    this.swService = swService;
+  }
+
+  ngOnInit(){
+        // fetch the data
+        this.swService.fetchCharacters();
+  }
 }

@@ -43,7 +43,6 @@ export class StarWarsService {
       });
       return chars;
     })
-    
     .subscribe(
       (data : any) => {
         console.log(data);
