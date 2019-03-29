@@ -7,38 +7,10 @@
     border-bottom-color: #626262 !important;
 }
 
-.column-car-image img {
-    margin-top: -9px;
+.image-staff img {
+    margin-top: -15px;
     border-radius: 2px;
-  }
-  
-  .column-car-image .fancy-grid-cell-inner {
-    margin-top: 9px;
-  }
-  
-  .color-column .fancy-grid-cell-inner div {
-    margin-left: 9px;
-  }
-  
-  .fancy-theme-gray.fancy-panel .fancy-panel-header {
-    border-bottom: 2px solid #e3223a;
-  }
-
-// gridConfig3
-.id-column-cls .fancy-grid-cell-inner {
-    margin-top: 30px;
-    margin-left: 14px;
-    font-size: 14px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
-
-.id-column-cls .fancy-grid-cell {
-    border-right: 1px solid rgb(211, 219, 225) !important;
-    background-color: rgb(240, 242, 244);
-}
-.photo img {
-    width: 80px;
-    max-width: none;
-    margin-top: -5px;
-    margin-left: -10px;
-}
-

@@ -8,8 +8,22 @@
 
 
 <div class="jumbotron jumbotron-fluid">
+  
   <div class="container">
     <fancy-grid-angular [config]="gridConfig"></fancy-grid-angular>
+  </div>
+  <br>
+
+  <div class="container" style="display: flex;">
+
+    <div style="flex: 2; border: 1px solid red">
+      <fancy-grid-angular [config]="gridTree"></fancy-grid-angular>
+    </div>
+    
+    <div style="flex: 2; border: 1px solid green">
+      <fancy-grid-angular [config]="gridTree"></fancy-grid-angular>
+    </div>
+    
   </div>
 </div>
 
