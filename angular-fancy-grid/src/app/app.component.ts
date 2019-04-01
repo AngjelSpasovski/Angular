@@ -13,10 +13,11 @@ export class AppComponent {
   gridConfig: object;
   gridGrouping: object;
   gridTree: object;
+  gridTreeFolder: object;
   
   constructor () {
     
-    const data = [
+    let data = [
       {id: 1,   name: 'Ted',       surname: 'Smith',       company: 'Electrical Systems',  age: 30,   married: false,  country: 'England',   position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42, image: "https://fancygrid.com/images/staff/boy-4.png"},
       {id: 2,   name: 'Ed',        surname: 'Johnson',     company: 'Energy and Oil',      age: 35,   married: true,   country: 'Canada',    position: 'C/C++ Data Developer', weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42, image: "https://fancygrid.com/images/staff/girl.png"},
       {id: 3,   name: 'Sam',       surname: 'Williams',    company: 'Airbus',              age: 38,   married: true,   country: 'USA',       position: 'Technical Analyst',    weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42, image: "https://fancygrid.com/images/staff/girl-1.png"},
@@ -43,7 +44,7 @@ export class AppComponent {
       {id: 24,  name: 'Eli',       surname: 'Mihajloska',  company: 'Apple',               age: 37,   married: true,   country: 'Macedonia', position: 'Flex Developer',       weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42}
     ];
 
-    const dataGrouping = [
+    let dataGrouping = [
       {model: 'Sorento Prime',  fullName: 'KIA Sorento Prime Prestige 2.2 L 6AT', color: '#4d382d',   colorName: '(MY3) Imperial Bronze',   price: 37500, count: 1}, 
       {model: 'Picanto',        fullName: 'KIA Picanto 1.2 L 4AT',                color: '#860b0b',   colorName: '(BEG) Signal Red',        price: 13000, count: 1}, 
       {model: "cee'd",          fullName: "KIA cee'd Classic 1.4 L 6MT",          color: '#393D43',   colorName: '(E5B) Dark Gun Metal',    price: 12500, count: 1}, 
@@ -83,7 +84,7 @@ export class AppComponent {
       {model: "cee'd",          fullName: "KIA cee'd Prestige 1.6 L 6AT",         color: 'white',     colorName: '(HW2) Deluxe White',      price: 17000, count: 1}
   ];
 
-    const dataTree = [
+    let dataTree = [
       
       {name: 'North America',type: 'Territory',expanded: true,  
         child: [
@@ -150,6 +151,62 @@ export class AppComponent {
         ]
       }
     ];
+
+
+
+    let dataTreeFolder = [
+      {name: 'KIA', type: 'root', expanded: true,
+        child: [
+          {name: 'Sedan', type: 'type', expanded: true,
+            child: [
+              {name: 'Smart Compact Morning', img: 'imgs/new-morning.png',  leaf: true, price: 9890},
+              {name: 'New Ray',               img: 'imgs/ray.png',          leaf: true, price: 11150},
+              {name: 'K3',  leaf: true, img: 'imgs/k3.png', price: 14250},
+              {name: 'K5',  leaf: true, img: 'imgs/newk5.png',  price: 20900},
+              {name: 'K7',  leaf: true, img: 'imgs/k7.png', price: 28600},
+              {name: 'Stinger', leaf: true, img: 'imgs/stinger.png',  price: 32300},
+              {name: 'K9',  leaf: true, img: 'imgs/k9.png', price: 47000}
+            ]
+        },
+        {name: 'ECO', type: 'type',
+          child: [
+            {name: 'Niro',  leaf: true, img: 'imgs/niro.png', price: 21700},
+            {name: 'Niro Phev', leaf: true, img: 'imgs/niro-phev.png',  price: 30500},
+            {name: 'Soul Ev', leaf: true, img: 'imgs/soul_ev.png',  price: 39400},
+            {name: 'K5 plug-in Hybrid', leaf: true, img: 'imgs/k5_hybrid.png',  price: 36500},
+            {name: 'K5 Hybrid', leaf: true, img: 'imgs/k5phev.png', price: 26500},
+            {name: 'K7 Hybrid', leaf: true, img: 'imgs/k7_hybrid.png',  price: 33000}
+          ]
+        },
+        {name: 'SUV', type: 'type',
+          child: [
+            {name: 'Stonic',  leaf: true, img: 'imgs/stonic.png', price: 16000},
+            {name: 'Niro',  leaf: true, img: 'imgs/niro-phev.png',  price: 21700},
+            {name: 'New Soul',  leaf: true, img: 'imgs/soul.png', price: 16100},
+            {name: 'New Carens',  leaf: true, img: 'imgs/new_carens.png', price: 18500},
+            {name: 'Sportage',  leaf: true, img: 'imgs/sportageql.png', price: 19500},
+            {name: 'New Sorento', leaf: true, img: 'imgs/sorento.png',  price: 25700},
+            {name: 'Mohave',  leaf: true, img: 'imgs/mohave.png', price: 37900},
+            {name: 'Carnival',  leaf: true, img: 'imgs/new_carnival.png', price: 25400},
+            {name: 'Carnival HI-LIMOUSINE', leaf: true, img: 'imgs/carnival_hi_limousine.png',  price: 39300},
+            {name: 'Carnival OUTDOOR',  leaf: true, img: 'imgs/carnival_outdoor.png', price: 35900}
+          ]
+        },
+        {name: 'Commercial',  type: 'type',
+          child: [
+            {name: 'K5 Taxi', leaf: true, img: 'imgs/newk5_taxi.png', price: 15300},
+            {name: 'K7 Taxi', leaf: true, img: 'imgs/k7_taxi.png',    price: 23000},
+            {name: 'New GrandBird', leaf: true, img: 'imgs/new_granbird.png', price: 145000},
+            {name: 'Bongo 3', leaf: true, img: 'imgs/truck.png',  price: 14000},
+            {name: 'Bongo 3 FrozenTapcha',  leaf: true, img: 'imgs/top_car.png',  price: 18300},
+            {name: 'Bongo 3 GeneralTruck',  leaf: true, img: 'imgs/construct_sung.png', price: 18900},
+            {name: 'Bongo 3 PowerGate',     leaf: true, img: 'imgs/construc.png',   price: 16900},
+            {name: 'Bongo 3 Homelori',  leaf: true, img: 'imgs/transport.png',  price: 28000}
+          ]
+        }]
+      }];
+
+ 
 
     /***** set input type *****/
     // 'rowdrag'
@@ -366,9 +423,9 @@ export class AppComponent {
     }
 
     this.gridTree = {
-      title: 'Tree Grid: Region - Country - City',
-      width: 500,
-      height: 300,
+      title: 'Tree Grid',
+      width: 600,
+      height: 600,
       data: {
         items: dataTree,
         fields: ['name', 'type', 'population']
@@ -398,6 +455,42 @@ export class AppComponent {
         width: 120
       }]
 
+    }
+
+    this.gridTreeFolder = {
+      title: 'Tree Grid Folder',
+      width: 600,
+        height: 600,
+        columnLines: false,
+        theme: 'gray',
+      trackOver: true,
+      selModel: 'row',
+        data: {
+          items: dataTreeFolder,
+        fields: ['name', 'type', 'price', 'img']
+        },
+        defaults: {
+          type: 'string',
+        draggable: true,
+          sortable: true,
+          resizable: true
+        },
+        columns: [{
+          type: 'tree',
+        folder: true,
+        title: 'Name',
+        width: 240,
+        index: 'name'
+        },{
+          index: 'name',
+          title: 'Name',
+          width: 140
+        },{
+          index: 'price',
+          title: 'Start Price',
+        type: 'currency',
+          width: 80
+        }]
     }
   }
 }
