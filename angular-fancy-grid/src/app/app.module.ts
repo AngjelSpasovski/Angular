@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FancyGridModule } from 'fancy-grid-angular';
+import * as $ from 'jquery';
 
 @NgModule({
   declarations: [

@@ -10,21 +10,60 @@
 <div class="jumbotron jumbotron-fluid">
   
   <div class="container">
-    <fancy-grid-angular [config]="gridConfig"></fancy-grid-angular>
+    <fancy-grid-angular [config]="gridConfig_Light"></fancy-grid-angular>
+    <br>
+    <fancy-grid-angular [config]="gridConfig_Dark"></fancy-grid-angular>
   </div>
   <br>
 
   <div class="container" style="display: flex;">
-
-    <div style="flex: 2; border: 1px solid red">
+    <div style="flex: 2;">
       <fancy-grid-angular [config]="gridTree"></fancy-grid-angular>
     </div><br>
     
-    <div style="flex: 2; border: 1px solid green">
+    <div style="flex: 2;">
       <fancy-grid-angular [config]="gridTreeFolder"></fancy-grid-angular>
     </div>
-    
   </div>
+  <br>
+
+  <div class="container" style="display: flex;">
+    <div style="flex: 2;">
+      <fancy-grid-angular [config]="gridGroupingColapse"></fancy-grid-angular>
+    </div>
+    
+    <div style="flex: 2;">
+      <fancy-grid-angular [config]="gridTrackOverSelection"></fancy-grid-angular>
+    </div>
+  </div>
+  <br>
+
+  <div class="container" style="display: flex;">
+    <div style="flex: 2;">
+      <fancy-grid-angular [config]="gridHbarStacked"></fancy-grid-angular>
+    </div>
+    
+    <div style="flex: 2;">
+      <fancy-grid-angular [config]="gridHBar"></fancy-grid-angular>
+    </div>  
+  </div>
+
+  <div class="container" style="display: flex;">
+    <div style="flex: 2;">
+      
+    </div>
+    
+    <div style="flex: 2;">
+      
+    </div>  
+  </div>
+
+  <br>
+
+  
+
+  
+
 </div>
 
 <router-outlet></router-outlet>
