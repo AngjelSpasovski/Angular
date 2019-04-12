@@ -26,30 +26,31 @@ export class AppComponent {
   constructor () {
     
     let data = [
-      {id: 1,   name: 'Ted',       surname: 'Smith',       company: 'Electrical Systems',  age: 30,   married: false,  country: 'England',   position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 17.9},
-      {id: 2,   name: 'Ed',        surname: 'Johnson',     company: 'Energy and Oil',      age: 35,   married: true,   country: 'Canada',    position: 'C/C++ Data Developer', weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 17.5},
-      {id: 3,   name: 'Sam',       surname: 'Williams',    company: 'Airbus',              age: 38,   married: true,   country: 'USA',       position: 'Technical Analyst',    weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 17.9},
-      {id: 4,   name: 'Alexander', surname: 'Krstev',      company: 'Renault',             age: 24,   married: false,  country: 'Macedonia', position: 'CSS3/HTML5 Developer', weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 12.9},
-      {id: 5,   name: 'Nicholas',  surname: 'Miller',      company: 'Adobe',               age: 33,   married: true,   country: 'USA',       position: 'Designer',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 11.9},
-      {id: 6,   name: 'Andrew',    surname: 'Thompson',    company: 'Google',              age: 28,   married: true,   country: 'USA',       position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 15.9},
-      {id: 7,   name: 'Ryan',      surname: 'Walker',      company: 'Siemens',             age: 39,   married: true,   country: 'England',   position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 12.9},
-      {id: 8,   name: 'John',      surname: 'Scott',       company: 'Cargo',               age: 45,   married: true,   country: 'USA',       position: 'Designer',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 11.9},
-      {id: 9,   name: 'James',     surname: 'Phillips',    company: 'Pro bugs',            age: 30,   married: false,  country: 'England',   position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 3.9},
-      {id: 10,  name: 'Brian',     surname: 'Edwards',     company: 'IT Consultant',       age: 23,   married: true,   country: 'USA',       position: 'Analytic',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 6.9},
-      {id: 11,  name: 'Georgi',    surname: 'OdKavadarci', company: 'Europe IT',           age: 24,   married: false,  country: 'Macedonia', position: 'Designer',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 0.9},
-      {id: 12,  name: 'Alex',      surname: 'Howard',      company: 'Cisco',               age: 27,   married: true,   country: 'Canada',    position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 9.9},
-      {id: 13,  name: 'Carlos',    surname: 'Wood',        company: 'HP',                  age: 36,   married: true,   country: 'USA',       position: 'Designer',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 1.9},
-      {id: 14,  name: 'Adrian',    surname: 'Russell',     company: 'Micro Systems',       age: 31,   married: true,   country: 'Macedonia', position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 5.9},
-      {id: 15,  name: 'Jeremy',    surname: 'Hamilton',    company: 'Big Machines',        age: 30,   married: true,   country: 'USA',       position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 9.9},
-      {id: 16,  name: 'Ivan',      surname: 'Woods',       company: '',                    age: 24,   married: true,   country: 'USA',       position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 2.9},
-      {id: 17,  name: 'Peter',     surname: 'West',        company: 'Adobe',               age: 26,   married: true,   country: 'Canada',    position: 'Designer',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 8.9},
-      {id: 18,  name: 'Scott',     surname: 'Simpson',     company: 'IBM',                 age: 29,   married: false,  country: 'England',   position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 6.9},
-      {id: 19,  name: 'Lorenzo',   surname: 'Tucker',      company: 'Intel',               age: 29,   married: false,  country: 'USA',       position: 'Analytic',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 6.9},
-      {id: 20,  name: 'Randy',     surname: 'Grant',       company: 'Bridges',             age: 30,   married: true,   country: 'USA',       position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 1.9},
-      {id: 21,  name: 'Arthur',    surname: 'Gardner',     company: 'Google',              age: 31,   married: true,   country: 'England',   position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 6.9},
-      {id: 22,  name: 'Orlando',   surname: 'Ruiz',        company: 'Apple',               age: 32,   married: false,  country: 'Canada',    position: 'Analytic',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 0.9},
-      {id: 23,  name: 'Goran',     surname: 'Babakov',     company: 'Apple',               age: 36,   married: false,  country: 'Macedonia', position: 'Ruby Developer',       weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 3.9},
-      {id: 24,  name: 'Eli',       surname: 'Mihajloska',  company: 'Apple',               age: 37,   married: true,   country: 'Macedonia', position: 'Flex Developer',       weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',   online: 4.9}
+      {id: 1,   name: 'Ted',       surname: 'Smith',       company: 'Electrical Systems',  age: 30,   married: false,  country: 'England',   position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/UK.png',        online: 17.9,   birthday: "1967.09.17"},
+      {id: 2,   name: 'Ed',        surname: 'Johnson',     company: 'Energy and Oil',      age: 35,   married: true,   country: 'Canada',    position: 'C/C++ Data Developer', weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Canada.png',    online: 17.5,   birthday: "1967.09.17"},
+      {id: 3,   name: 'Sam',       surname: 'Williams',    company: 'Airbus',              age: 38,   married: true,   country: 'USA',       position: 'Technical Analyst',    weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/USA.png',       online: 17.9,   birthday: "1967.09.17"},
+      {id: 4,   name: 'Alexander', surname: 'Krstev',      company: 'Renault',             age: 24,   married: false,  country: 'Macedonia', position: 'CSS3/HTML5 Developer', weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Colombia.png',  online: 12.9,   birthday: "1967.09.17"},
+      {id: 5,   name: 'Nicholas',  surname: 'Miller',      company: 'Adobe',               age: 33,   married: true,   country: 'USA',       position: 'Designer',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/USA.png',       online: 11.9,   birthday: "1967.09.17"},
+      {id: 6,   name: 'Andrew',    surname: 'Thompson',    company: 'Google',              age: 28,   married: true,   country: 'USA',       position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/USA.png',       online: 15.9,   birthday: "1967.09.17"},
+      {id: 7,   name: 'Ryan',      surname: 'Walker',      company: 'Siemens',             age: 39,   married: true,   country: 'England',   position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/UK.png',        online: 12.9,   birthday: "1967.09.17"},
+      {id: 8,   name: 'John',      surname: 'Scott',       company: 'Cargo',               age: 45,   married: true,   country: 'USA',       position: 'Designer',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/USA.png',       online: 11.9,   birthday: "1967.09.17"},
+      {id: 9,   name: 'James',     surname: 'Phillips',    company: 'Pro bugs',            age: 30,   married: false,  country: 'England',   position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/UK.png',        online: 3.9,    birthday: "1967.09.17"},
+      {id: 10,  name: 'Brian',     surname: 'Edwards',     company: 'IT Consultant',       age: 23,   married: true,   country: 'USA',       position: 'Analytic',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',     online: 6.9,    birthday: "1967.09.17"},
+      {id: 11,  name: 'Georgi',    surname: 'OdKavadarci', company: 'Europe IT',           age: 24,   married: false,  country: 'Macedonia', position: 'Designer',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Colombia.png',  online: 0.9,    birthday: "1967.09.17"},
+      {id: 12,  name: 'Alex',      surname: 'Howard',      company: 'Cisco',               age: 27,   married: true,   country: 'Canada',    position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',     online: 9.9,    birthday: "1967.09.17"},
+      {id: 13,  name: 'Carlos',    surname: 'Wood',        company: 'HP',                  age: 36,   married: true,   country: 'USA',       position: 'Designer',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Colombia.png',  online: 1.9,    birthday: "1967.09.17"},
+      {id: 14,  name: 'Adrian',    surname: 'Russell',     company: 'Micro Systems',       age: 31,   married: true,   country: 'Macedonia', position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',     online: 5.9,    birthday: "1967.09.17"},
+      {id: 15,  name: 'Jeremy',    surname: 'Hamilton',    company: 'Big Machines',        age: 30,   married: true,   country: 'USA',       position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',     online: 9.9,    birthday: "1967.09.17"},
+      {id: 16,  name: 'Ivan',      surname: 'Woods',       company: '',                    age: 24,   married: true,   country: 'USA',       position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Sweden.png',    online: 2.9,    birthday: "1967.09.17"},
+      {id: 17,  name: 'Peter',     surname: 'West',        company: 'Adobe',               age: 26,   married: true,   country: 'Canada',    position: 'Designer',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',     online: 8.9,    birthday: "1967.09.17"},
+      {id: 18,  name: 'Scott',     surname: 'Simpson',     company: 'IBM',                 age: 29,   married: false,  country: 'England',   position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',     online: 6.9,    birthday: "1967.09.17"},
+      {id: 19,  name: 'Lorenzo',   surname: 'Tucker',      company: 'Intel',               age: 29,   married: false,  country: 'USA',       position: 'Analytic',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Canada.png',    online: 6.9,    birthday: "1967.09.17"},
+      {id: 20,  name: 'Randy',     surname: 'Grant',       company: 'Bridges',             age: 30,   married: true,   country: 'USA',       position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',     online: 1.9,    birthday: "1967.09.17"},
+      {id: 19,  name: 'Lorenzo',   surname: 'Tucker',      company: 'Intel',               age: 29,   married: false,  country: 'USA',       position: 'Analytic',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Canada.png',    online: 6.9,    birthday: "1967.09.17"},
+      {id: 21,  name: 'Arthur',    surname: 'Gardner',     company: 'Google',              age: 31,   married: true,   country: 'England',   position: 'Project Manager',      weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',     online: 6.9,    birthday: "1967.09.17"},
+      {id: 22,  name: 'Orlando',   surname: 'Ruiz',        company: 'Apple',               age: 32,   married: false,  country: 'Canada',    position: 'Analytic',             weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Italy.png',     online: 0.9,    birthday: "1967.09.17"},
+      {id: 23,  name: 'Goran',     surname: 'Babakov',     company: 'Apple',               age: 36,   married: false,  country: 'Macedonia', position: 'Ruby Developer',       weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Australia.png', online: 3.9,    birthday: "1967.09.17"},
+      {id: 24,  name: 'Eli',       surname: 'Mihajloska',  company: 'Apple',               age: 37,   married: true,   country: 'Macedonia', position: 'Flex Developer',       weekWorkHours: [6, 8, 3, 4, 3, 1, 0], src: "http://fancygrid.com/img/samples/nusha.png",    total: 42,   flag: 'http://fancygrid.com/dashboards/iots/img/Australia.png', online: 4.9,    birthday: "1967.09.17"}
     ];
 
     let dataGrouping = [
@@ -177,6 +178,7 @@ export class AppComponent {
               {name: 'K9',                    leaf: true,   img: 'imgs/k9.png',                     price: 47000}
             ]
           },
+
           {name: 'ECO',         type: 'type',
             child: [
               {name: 'Niro',                    leaf: true,   img: 'imgs/niro.png',                  price: 21700},
@@ -187,6 +189,7 @@ export class AppComponent {
               {name: 'K7 Hybrid',               leaf: true,   img: 'imgs/k7_hybrid.png',             price: 33000}
             ]
           },
+
           {name: 'SUV',         type: 'type',
             child: [
               {name: 'Stonic',                  leaf: true,   img: 'imgs/stonic.png',                 price: 16000},
@@ -517,26 +520,47 @@ export class AppComponent {
     // 'checkbox'
 
     this.gridConfig_Light = {
-      theme: 'gray',
+
+      theme: 'gray',            // grid theme
+      width: 1200,
+      height: 600,
+      resizable: true,          // resizable grid
+      multiSort: true,          // multiple sorting columnns
+      selModel: 'rows',         // 
+      clicksToEdit: 2,          // double click for editing
+      columnLines: false,       // 
+      columnClickData: true,    // 
+      trackOver: true,          //  
+      //rowEdit: true,          // the all row editable
+
+      defaults: {
+        type: 'string',
+        width: 100,
+        sortable: true,     // sortable columns
+        resizable: true,
+        editable: true,
+        ellipsis: true,
+        titleEditable: true
+      },
+
+
+      data: {
+        items: data
+      },
+
       title: {
         text: 'My Fancy Grid Light',
         style: {
           'text-align': 'center'
         }
-      }, 
+      },
       subTitle: {
         text: 'Sub Title Light',
         style: {
           'text-align': 'left'
         }
       },
-      width: 1200,
-      height: 400,
-      data: {
-        items: data
-      },
-      trackOver: true,
-      resizable: true,
+
       // Search Bar
       tbar: [{
         type: 'search',
@@ -547,155 +571,176 @@ export class AppComponent {
       }],
 
       footer: {
-        status: '<span style="position: relative;top: 3px;">*</span> - asdasdasdas asasdasd asdasd 2019',
+        status: `<span style="position: relative;top: 3px;">
+                 - Creater by Angjel Spasovski &#174;, April 2019
+                 </span> `,
         source: {
           text: 'Some_text_link',
           link: 'google.com'
         }
       },
 
-      multiSort: true,         // multiple sorting columnns
-
-      defaults: {
-        type: 'string',
-        width: 100,
-        //sortable: true,     // sortable columns
-        resizable: true,
-        editable: true,
-        ellipsis: true,
-        titleEditable: true
-      },
-
-      selModel: 'rows',
-      rowEdit: true,            // the all row editable 
-      clicksToEdit: 2,          // double click for editing
-      columnLines: false,       //
-      columnClickData: true,    // 
-      
-      //paging: true,           // Bottom Paging 
-
-     
-      paging: {                  // Header and Footer Paging
-        barType: 'both',
+      // Header and Footer Paging
+      paging: {                 
+        //barType: 'both',
         pageSize: 20,
         pageSizeData: [5, 10, 20, 50]
       },
 
       columns: [
-      // Left counter
-      {type: 'order', locked: true}, 
-      // Right counter
-      {type: 'order', rightLocked: true},
-      // Dragable row
-      {type: 'rowdrag'},
       
-      {
-        index: 'id',
-        cls: 'column-cls-kia-model-name',
-        title: '<img style="height: 30px;" src="https://fancygrid.com/dashboards/column-header-images/images/kia-soul.png">',
-        editable: false,
-        width: 80,
-        type: 'number'
-
-      },{
-        index: 'flag',
-        title: 'Flag',
-        width: 40,
-        type: 'image',
-        cls: 'flag'
-      },{
-        index: 'company',
-        title: 'Company',
-        width: 120,
-        filter: {
-          header: true,
-          emptyText: 'Search'
-        }
-      },{
-        index: 'name',
-        title: 'Name',
-        filter: {
-          header: true,
-          emptyText: 'Search'
-        }
-      },{
-        index: 'surname',
-        title: 'Sur Name',
-        filter: {
-          header: true,
-          emptyText: 'Search'
-        }
-      }, {
-        index: 'country',
-        title: 'Country',
-        type: 'combo',
-        // data combination for choosing
-        data: ['USA', 'Canada', 'England', 'Macedonia'],
-        filter: {
-          header: true,
-          emptyText: 'Search'
-        }
-      }, {
-        index: 'age',
-        title: 'Age',
-        type: 'number',
-        // clickable number field with up and down arrows
-        spin: true,
-        width: 70,
-        // validation type
-        vtype: {
-          // cannot be 'empty' or 'not a number'
-          before: ['notempty', 'notnan'],
-          type: 'range',
-          min: 20,
-          max: 40
+        // Left counter
+        {type: 'order', locked: true}, 
+       
+        // Right counter
+        {type: 'order', rightLocked: true},
+        
+        // Dragable row
+        {type: 'rowdrag'},
+        
+        {
+          index: 'id',
+          cls: 'column-cls-kia-model-name',   // class name
+          editable: false,                    // not editable
+          title: `<img 
+                    style="height: 30px;" 
+                    src="https://fancygrid.com/dashboards/column-header-images/images/kia-soul.png">`,
+          width: 80,
+          type: 'number',
+          menu: 'columns'
         },
-        filter: {
-          header: true,
-          emptyText: 'Search'
+        
+        {
+          index: 'flag',
+          title: 'Flag',
+          cls: 'flag',
+          width: 40,
+          type: 'image',
+          editable: false,
+        },
+        
+        {
+          index: 'company',
+          title: 'Company',
+          width: 120,
+          filter: {
+            header: true,
+            emptyText: 'Search'
+          }
+        },
+        
+        {
+          index: 'name',
+          title: 'Name',
+          filter: {
+            header: true,
+            emptyText: 'Search'
+          }
+        },
+        
+        {
+          title: 'Birthday',
+          index: 'birthday',
+          type: 'date',
+          width: 90,
+          format: {
+            read: 'Y.m.d',
+            write: 'm/d/Y',
+            edit: 'm/d/Y'
+          }
+        },
+        
+        {
+          index: 'country',
+          title: 'Country',
+          type: 'combo',
+          // data combination for choosing
+          data: ['USA', 'Canada', 'England', 'Macedonia'],
+          filter: {
+            header: true,
+            emptyText: 'Search'
+          }
+        }, 
+        
+        {
+          index: 'age',
+          title: 'Age',
+          type: 'number',
+          // clickable number field with up and down arrows
+          spin: true,
+          width: 70,
+          // validation type
+          vtype: {
+            // cannot be 'empty' or 'not a number'
+            before: ['notempty', 'notnan'],
+            type: 'range',
+            min: 20,
+            max: 40
+          },
+          filter: {
+            header: true,
+            emptyText: 'Search'
+          }
+        }, 
+        
+        {
+          text: 'Marrige Group',
+          columns: [
+            
+            {
+              index: 'married',
+              title: 'Married',
+              type: 'checkbox',
+              width: 70,
+              filter: {
+                header: true,
+                emptyText: 'Search'
+              }
+            }, 
+
+            {
+              index: 'married',
+              title: 'Married',
+              type: 'switcher',
+              width: 70,
+              filter: {
+                header: true,
+                emptyText: 'Search'
+              }
+            }
+
+          ]
+        },
+        
+        {
+          index: 'position',
+          title: 'Position',
+          filter: {
+            header: true,
+            emptyText: 'Search'
+          }
+        },
+
+        {
+          index: 'online',
+          title: 'Online *',
+          type: 'number',
+          width: 55,
+        }, 
+        
+        {
+          index: 'online',
+          type: 'progressbar',
+          width: 50,
+          title: 'Relative size',
+          // flex column
+          flex: 1,
+          sparkConfig: {
+            percents: false
+          }
         }
-      }, {
-        index: 'married',
-        title: 'Married',
-        type: 'checkbox',
-        width: 70,
-        filter: {
-          header: true,
-          emptyText: 'Search'
-        }
-      }, {
-        index: 'married',
-        title: 'Married',
-        type: 'switcher',
-        width: 70,
-        filter: {
-          header: true,
-          emptyText: 'Search'
-        }
-      }, {
-        index: 'position',
-        title: 'Position',
-        filter: {
-          header: true,
-          emptyText: 'Search'
-        }
-      },
-      {
-        index: 'online',
-        title: 'Online *',
-        type: 'number',
-        width: 55,
-      }, {
-        index: 'online',
-        type: 'progressbar',
-        width: 50,
-        title: 'Relative size',
-        // flex column
-        flex: 1,
-        sparkConfig: {
-          percents: false
-        }
-      }]
+        
+      ]
     };
 
     this.gridConfig_Dark = {
@@ -713,7 +758,7 @@ export class AppComponent {
         }
       },
       width: 1200,
-      height: 400,
+      height: 600,
       data: {
         items: data
       },
@@ -729,7 +774,7 @@ export class AppComponent {
       }],
 
       footer: {
-        status: '<span style="position: relative;top: 3px;">*</span> - asdasdasdas asasdasd asdasd 2019',
+        status: '<span style="position: relative;top: 3px;">*</span> - Creater by Angjel Spasovski &#174;, April 2019',
         source: {
           text: 'Some_text_link',
           link: 'google.com'
@@ -801,13 +846,16 @@ export class AppComponent {
           emptyText: 'Search'
         }
       },{
-        index: 'surname',
-        title: 'Sur Name',
-        filter: {
-          header: true,
-          emptyText: 'Search'
+        title: 'Birthday',
+        index: 'birthday',
+        type: 'date',
+        width: 90,
+        format: {
+          read: 'Y.m.d',
+          write: 'm/d/Y',
+          edit: 'm/d/Y'
         }
-      }, {
+       }, {
         index: 'country',
         title: 'Country',
         type: 'combo',
@@ -931,25 +979,29 @@ export class AppComponent {
 
     this.gridTree = {
       title: 'Tree Grid',
+      theme: 'gray',
+      selModel: 'rows',
+      trackOver: true,
       width: 600,
       height: 600,
+
       data: {
         items: dataTree,
         fields: ['name', 'type', 'population']
       },
-      selModel: 'rows',
-      trackOver: true,
-      theme: 'gray',
+
       defaults: {
         type: 'string',
         sortable: true,
         resizable: true
       },
+
       columns: [{
+        index: 'name',
         type: 'tree',
         title: 'Name',
-        width: 200,
-        index: 'name'
+        width: 200
+        
       }, {
         index: 'type',
         title: 'Territory',
@@ -960,34 +1012,37 @@ export class AppComponent {
         format: 'number',
         type: 'number',
         width: 120
-      }]
-
-    }
+      }
+    ]}
 
     this.gridTreeFolder = {
       title: 'Tree Grid Folder',
+      theme: 'gray',
       width: 600,
-        height: 600,
-        columnLines: false,
-        theme: 'gray',
+      height: 600,
+      columnLines: false,
       trackOver: true,
       selModel: 'row',
-        data: {
-          items: dataTreeFolder,
+
+      data: {
+        items: dataTreeFolder,
         fields: ['name', 'type', 'price', 'img']
         },
-        defaults: {
-          type: 'string',
+
+      defaults: {
+        type: 'string',
         draggable: true,
-          sortable: true,
-          resizable: true
-        },
-        columns: [{
+        sortable: true,
+        resizable: true
+      },
+
+      columns: [
+        {
           type: 'tree',
-        folder: true,
-        title: 'Name',
-        width: 240,
-        index: 'name'
+          folder: true,
+          title: 'Name',
+          width: 240,
+          index: 'name'
         },{
           index: 'name',
           title: 'Name',
@@ -995,7 +1050,7 @@ export class AppComponent {
         },{
           index: 'price',
           title: 'Start Price',
-        type: 'currency',
+          type: 'currency',
           width: 80
         }]
     }
@@ -1006,6 +1061,10 @@ export class AppComponent {
       trackOver: true,
       selModel: 'row',
       textSelection: true,
+      clicksToEdit: 1,
+      columnLines: false,
+      columnClickData: true,
+
       data: {
         items: dataGroupingColapse
       },
@@ -1015,44 +1074,54 @@ export class AppComponent {
         resizable: true,
         sortable: true
       },
-      clicksToEdit: 1,
-      columnLines: false,
-      columnClickData: true,
+
+
       grouping: {
         by: 'model'
       },
-      columns: [{
-        title: 'Full Name',
-        index: 'fullName',
-        width: 160
-      }, {
-        title: 'Color',
-        index: 'color',
-        type: 'color',
-        cls: 'color-column',
-        sortable: false,
-        width: 60
-      }, {
-        title: 'Color Name',
-        index: 'colorName',
-        width: 140
-      }, {
-        title: 'Price',
-        index: 'price',
-        format: 'number',
-        type: 'number',
-        render: function(o: any) {
-          o.value = '$' + o.value;
-  
-          return o;
-        }
-      }, {
-        title: 'Count',
-        index: 'count',
-        type: 'number',
-        width: 60
-      }]
 
+      columns: [
+        {
+          title: 'Full Name',
+          index: 'fullName',
+          width: 160
+        },
+        
+        {
+          title: 'Color',
+          index: 'color',
+          type: 'color',
+          cls: 'color-column',
+          sortable: false,
+          width: 60
+        }, 
+        
+        {
+          title: 'Color Name',
+          index: 'colorName',
+          width: 140
+        }, 
+        
+        {
+          title: 'Price',
+          index: 'price',
+          format: 'number',
+          type: 'number',
+          render: function(o: any) {
+            o.value = '$' + o.value;
+    
+            return o;
+          }
+        }, 
+        
+        {
+          title: 'Count',
+          index: 'count',
+          type: 'number',
+          width: 60
+        }
+    
+      ]
     }
 
     this.gridTrackOverSelection = {
@@ -1068,20 +1137,20 @@ export class AppComponent {
           text: 'Cell',
           enableToggle: true,
           handler: function(b) {
-            this.setTrackOver('cell', !b.pressed);
+            
           }
         }, {
           text: 'Column',
           enableToggle: true,
           handler: function(b) {
-            this.setTrackOver('column', !b.pressed);
+            
           }
         }, {
           text: 'Row',
           enableToggle: true,
           pressed: true,
           handler: function(b) {
-            this.setTrackOver('row', !b.pressed);
+            
           }
         }]
       }],
